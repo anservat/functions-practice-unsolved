@@ -15,6 +15,24 @@
  */
 
 // Your code goes here...
+function doesArrayIncludeItemsBetweenVals(arr, val1, val2) {
+  for (var i = 0; 
+    i < arr.length; 
+    i++) 
+    
+  {
+    const item = arr[i];
+
+    if (item > val1 && item < val2) {
+      return true; // Early return if item is found
+    }
+  }
+
+  return false; // Default return if no item is found
+}
+
+console.log(doesArrayIncludeItemsBetweenVals([2, 4, 2], 3, 5)); // true
+console.log(doesArrayIncludeItemsBetweenVals([2, 4, 2], 5, 10)); // false
 
 
 
@@ -36,6 +54,39 @@
 
 // Your code goes here...
 
+//Named Function Syntax:
+function getValueWithConditionOne(num1, num2) {
+  if (num1 === 40 && num2 === 40) {
+    return num1 + num2;
+  } else {
+    return (num1 + num2) * 2;
+  }
+}
+
+console.log(getValueWithConditionOne(40, 40)); // Output: 80
+console.log(getValueWithConditionOne(20, 30)); // Output: 100
+
+//Arrow Function Syntax:
+const getValueWithConditionTwo = (num1, num2) =>  {  
+    if (num1 === 40 && num2 === 40) {
+    return num1 + num2; } 
+    else {return (num1 + num2) * 2;}
+};
+
+console.log(getValueWithConditionTwo(40, 40)); // Output: 80
+console.log(getValueWithConditionTwo(20, 30)); // Output: 100
+
+//Function Expression Syntax with Anonymous Function:
+const getValueWithConditionThree = function(num1, num2) {
+  if (num1 === 40 && num2 === 40) {
+    return num1 + num2;
+  } else {
+    return (num1 + num2) * 2;
+  }
+};
+
+console.log(getValueWithConditionThree(40, 40)); // Output: 80
+console.log(getValueWithConditionThree(20, 30)); // Output: 100
 
 
 
