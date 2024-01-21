@@ -13,6 +13,18 @@
 
 // Your code goes here...
 
+function getDiffTwentySeven(num) {
+  const diff = Math.abs(num - 27);
+          if (num > 27) {
+    return 2 * diff;
+    } 
+          else {
+    return diff;
+    }
+  }
+  
+  console.log(getDiffTwentySeven(45));
+  console.log(getDiffTwentySeven(15));
 
 
 
@@ -24,9 +36,18 @@
  */
 
 // Your code goes here
+function sumOfTwoIntegers(num1, num2) {
+  const sum = num1 + num2;
+    if (num1 === num2) {
+      return 3  * sum;
+    }
+    else {
+      return sum;
+      }
+    }
 
-
-
+    console.log(sumOfTwoIntegers(13, 13));
+    console.log(sumOfTwoIntegers(13, 14));
 
 /** =========================
  * Create a isOneOfThemOrTheirSumIsFourty(num1, num2) function to check two given numbers and return a boolean.
@@ -39,8 +60,18 @@
 
 // Your code goes here...
 
+ // Check if one of the numbers is 40 or if their sum is 40
 
+ function isOneOfThemOrTheirSumIsFourty(num1, num2) {
+  return num1 === 40 || num2 === 40 || (num1 + num2) === 40;
+}
 
+export { isOneOfThemOrTheirSumIsFourty };
+
+// Test examples
+console.log(isOneOfThemOrTheirSumIsFourty(40, 13)); // Output: true
+console.log(isOneOfThemOrTheirSumIsFourty(22, 18)); // Output: true
+console.log(isOneOfThemOrTheirSumIsFourty(23, 16)); // Output: false
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-5"
